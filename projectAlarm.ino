@@ -46,7 +46,7 @@ void setup() {
 
 void loop() { 
   if(Serial.available() > 0){ // Checks whether data is comming from the serial port
-       state = Serial.read();}
+       state = Serial.read();}. // state is what hols the value that is send from the phone. 
   
    buttonState = digitalRead(buttonPin);
    String time = rtc.getTimeStr();
@@ -112,23 +112,5 @@ void loop() {
       
    }
 
-   /* if (buttonState == HIGH) {
-    Serial.println("2");
- 
-  }
-  else{
-      Serial.println("0");
-  
-   delay(100); 
-  }
-  
-  if (buttonState2 == HIGH) {
-    Serial.println("High22");
- 
-  }
-  else{
-      Serial.println("low222");
-  
-   delay(100); 
-  }*/
+   
 }
